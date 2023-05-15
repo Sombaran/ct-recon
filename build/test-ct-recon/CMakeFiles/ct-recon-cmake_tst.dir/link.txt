@@ -1,0 +1,1 @@
+/Library/Developer/CommandLineTools/usr/bin/c++ -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names "CMakeFiles/ct-recon-cmake_tst.dir/main.cpp.o" -o ct-recon-cmake_tst  ../src-ct-recon/libct-recon-cmake_lib.a ../lib/libgtest.a 
