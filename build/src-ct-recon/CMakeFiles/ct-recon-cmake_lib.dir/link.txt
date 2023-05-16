@@ -1,2 +1,0 @@
-/Library/Developer/CommandLineTools/usr/bin/ar qc libct-recon-cmake_lib.a "CMakeFiles/ct-recon-cmake_lib.dir/main.cpp.o" "CMakeFiles/ct-recon-cmake_lib.dir/testSrc.cpp.o"
-/Library/Developer/CommandLineTools/usr/bin/ranlib libct-recon-cmake_lib.a
