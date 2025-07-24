@@ -1,4 +1,5 @@
 #include "testInc.h"
+#include <iostream>
 
 void test::foo()
 {

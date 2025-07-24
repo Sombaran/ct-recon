@@ -1,6 +1,7 @@
 // run main from test
 
 #include "testInc.h"
+#include <iostream>
 
 int main()
 {
