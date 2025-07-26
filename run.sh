@@ -12,9 +12,11 @@ read choice
 case $choice in
     1)
         echo "Building Release version CMakeList"
+        rm -rf build
         # Add commands for building development version here
         conan install . --output-folder=build --build=missing
         #conan build . --build-folder=build
+        mkdir build
         cd build
         source conanbuild.sh
         cmake .. -DCMAKE_TOOLCHAIN_FILE=conan_toolchain.cmake -DCMAKE_BUILD_TYPE=Release
