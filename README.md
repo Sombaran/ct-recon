@@ -1,4 +1,4 @@
-# ct-recon
+#   ct-recon
 
 This repository uses C++11 and beyond. Build tool used is _*CMakeList*_ and package manger used is _*Conan*_
 

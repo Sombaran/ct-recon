@@ -4,3 +4,8 @@ gtest/1.10.0
 [generators]
 CMakeDeps
 CMakeToolchain
+#BazelDeps
+#BazelToolchain
+
+#[layout]
+#bazel_layout
