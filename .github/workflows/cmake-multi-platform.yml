@@ -16,4 +16,4 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Run Bash script
-        run: bash run.sh > input.txt
+        run: bash run.sh < input.txt
