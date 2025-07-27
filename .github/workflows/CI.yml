@@ -24,10 +24,18 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+        with:
+          driver: docker-container
+          driver-opts: |
+            image=moby/buildkit:latest
+
       - name: Build and push Docker image
         uses: docker/build-push-action@v5
         with:
+          builder: ${{ steps.buildx.outputs.name }}
           context: .
           push: true
-          outputs: type=docker,dest=./myimage.tar
+          #outputs: type=docker,dest=./myimage.tar
           tags:  ${{ secrets.DOCKER_USERNAME }}/repo:v1
