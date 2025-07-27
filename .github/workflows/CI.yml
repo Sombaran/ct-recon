@@ -32,8 +32,4 @@ jobs:
           context: .
           push: true
           images: ${{ secrets.DOCKER_USERNAME }}/${{ github.repository }}
-          tags: |
-            type=schedule
-            type=ref,event=branch
-            type=semver,pattern={{version}}
-            type=sha
+          tags: v1
