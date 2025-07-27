@@ -47,8 +47,8 @@ jobs:
           #push: ${{ github.event.base_ref =='refs/heads/main' && github.ref_type == 'tag' && !startsWith(github.ref, 'refs/tags/v0.')}}
           registry: docker.io
           push: true
-          tags: stable,production
-          username: ${{ secrets.DOCKER_USERNAME }}
-          password: ${{ secrets.DOCKER_PASSWORD }}
+          tags: stable:v08
+          #username: ${{ secrets.DOCKER_USERNAME }}
+          #password: ${{ secrets.DOCKER_PASSWORD }}
           #tags: ${{ steps.metadata.outputs.tags }}
           #labels: ${{ steps.metadata.outputs.labels }}
