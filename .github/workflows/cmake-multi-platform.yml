@@ -1,13 +1,18 @@
-name: Build and Push Docker Image
-
+name: CI for docker/build-push-action
 on:
   push:
     branches:
       - main
-
+permissions:
+      contents: write # Only allow reading of repository contents
+      issues: write # Allow writing to issues
+      pull-requests: write # Allow writing to pull requests
 jobs:
   build-and-push:
     runs-on: ubuntu-latest
+    permissions:
+        contents: write # This job needs write access to contents
+        pull-requests: read # This job only needs read access to pull requests
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
