@@ -31,8 +31,6 @@ jobs:
       - name: Extract metadata for the Docker image
         id: metadata
         uses: docker/metadata-action@v2
-        with:
-          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
 
       - name: Build and push Docker image
         uses: docker/build-push-action@v5
