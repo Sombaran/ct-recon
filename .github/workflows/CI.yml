@@ -33,8 +33,6 @@ jobs:
         uses: docker/metadata-action@v2
         with:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
-          tags: |
-            type=semver,pattern={{version}}
 
       - name: Build and push Docker image
         uses: docker/build-push-action@v5
@@ -42,4 +40,3 @@ jobs:
           context: .
           push: true
           tags: ${{ github.repository }}/project:v1
-          labels: ${{ steps.meta.outputs.labels }}
