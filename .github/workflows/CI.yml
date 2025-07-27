@@ -31,5 +31,5 @@ jobs:
         with:
           context: .
           push: true
-          images: ${{ secrets.DOCKER_USERNAME }}/${{ github.repository }}
-          tags: v1
+          images: ${{ secrets.DOCKER_USERNAME }}
+          tags: ${{ github.repository }}:v1  
