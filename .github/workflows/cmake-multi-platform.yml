@@ -12,8 +12,12 @@ jobs:
   build:
     name: Build & push docker image
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      issues: write
     env:
       IMG_NAME: ${{ github.repository }}
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - name: Checkout
         uses: actions/checkout@v1
