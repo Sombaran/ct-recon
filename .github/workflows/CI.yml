@@ -29,5 +29,5 @@ jobs:
         with:
           context: .
           push: true
+          outputs: type=docker,dest=./myimage.tar
           tags:  ${{ secrets.DOCKER_USERNAME }}/repo:v1
-          outputs: type=docker,dest=${{ runner.temp }}/myimage.tar
