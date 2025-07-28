@@ -34,8 +34,17 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@v5
         with:
-          builder: ${{ steps.buildx.outputs.name }}
+          builder: ${{ steps.buildx.outputs.name }} # Refer to the name of the builder you set up
+          platforms: linux/amd64,linux/arm64 # Example for multi-platform build
           context: .
           push: true
           #outputs: type=docker,dest=./myimage.tar
           tags:  ${{ secrets.DOCKER_USERNAME }}/repo:v1
+
+      - name: Upload Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+            name: cpp-build-artifacts
+            path: build/
+              #libmylib.so # Or mylib.dll for Windows
+              #myprogram   # Or myprogram.exe for Windows
