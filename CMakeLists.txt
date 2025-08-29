@@ -15,10 +15,8 @@ add_executable(my_code
     source/testSrc.cpp
 )
 
-# testing
-# enable_testing()
-#find_package(GTest REQUIRED)
-#add_subdirectory(test)
-#target_link_libraries(my_tests PRIVATE GTest::gtest_main)
-
 target_include_directories(my_code PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
+
+# testing
+enable_testing()
+find_package(GTest REQUIRED)
