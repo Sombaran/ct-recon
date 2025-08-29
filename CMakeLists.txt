@@ -16,8 +16,8 @@ add_executable(my_code
 )
 
 # testing
-# enable_testing()
-#find_package(GTest REQUIRED)
+enable_testing()
+find_package(GTest REQUIRED)
 #add_subdirectory(test)
 #target_link_libraries(my_tests PRIVATE GTest::gtest_main)
 
