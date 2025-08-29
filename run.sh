@@ -1,6 +1,7 @@
 #! /bin/bash
 
-#rm -rf build  # Manually remove your build folder
+set -e
+
 echo "Please choose a build option:"
 echo "1) Development Build"
 echo "2) Production Build"
@@ -16,18 +17,19 @@ case $choice in
         # Add commands for building development version here
         conan install . --output-folder=build --build=missing
         #conan build . --build-folder=build
-        mkdir build
+        mkdir -p build
         cd build
-        source conanbuild.sh
+        #source conanbuild.sh
         cmake .. -DCMAKE_TOOLCHAIN_FILE=conan_toolchain.cmake -DCMAKE_BUILD_TYPE=Release
         cmake --build .
         echo "RUNNING EXECUTABLE"
         echo
         echo
-        clear
-        ./source/my_app
+        #clear
+        #./build/my_code
         echo
         echo
+        #rm -rf build
         ;;
     2)
         echo "Building Production version..."
