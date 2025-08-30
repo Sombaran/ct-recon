@@ -21,4 +21,5 @@ This repository uses C++11 and beyond. Build tool used is _*CMakeList*_ and pack
 - Install docker desktop
 - Pull and run image:  __docker run usomgupta/repo:v1__
 - Docker login: __docker login -u usomgupta__
-- Docker build image: __docker build .__
+- Docker build image: __docker build . -t repo:253406A__
+- Navigate to powershell in case of windows: __docker run -it [image ID] bash__
