@@ -31,9 +31,10 @@ RUN conan build .
 #    cmake .. -DCMAKE_TOOLCHAIN_FILE=conan_toolchain.cmake -DCMAKE_BUILD_TYPE=Release -j$(nproc) \
 #    cmake --build . \
 RUN bash -c "pwd; ls -lrth"
-#ENTRYPOINT ["./build/source/my_app"]
-ENTRYPOINT []
+# ENTRYPOINT ["./build/source/my_app"]
+# ENTRYPOINT []
 #RUN chmod +x run.sh
 #ENTRYPOINT ["./run.sh"]
 #CMD [ input.txt ]
 #CMD ["1"]
+CMD ["echo", "Hello, Darwin"]
