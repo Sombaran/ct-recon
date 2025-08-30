@@ -13,3 +13,12 @@ This repository uses C++11 and beyond. Build tool used is _*CMakeList*_ and pack
 
 ## CI
 ![CI Information](https://github.com/Sombaran/ct-recon/actions/runs/16551621497)
+
+## To test locally 
+- Execute sh run.sh
+
+## To test docker image locally
+- Install docker desktop
+- Pull and run image:  __docker run usomgupta/repo:v1__
+- Docker login: __docker login -u usomgupta__
+- Docker build image: __docker build .__
