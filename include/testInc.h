@@ -15,6 +15,7 @@ class test
     public:
     void foo();
     void reverseNumber(int& );
+    void insertionSort(int [], int );
 };
 #endif // MY_CODE_H
 

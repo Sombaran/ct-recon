@@ -33,3 +33,9 @@ void test::reverseNumber(int& number) {
 
     isNumberNegavtive(reverseNumber, numberIsNegative);
 }
+
+void test::insertionSort(int arr[], int n) {
+    for (int i=2;i<n;++i) {
+        
+    }
+}
