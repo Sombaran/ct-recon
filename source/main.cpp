@@ -42,7 +42,7 @@ int main()
     //FIX::SocketInitiator initiator(application, storeFactory, settings, logFactory);
     //initiator.start();
     std::cout << "QuickFIX application started. Press any key to stop." << std::endl;
-    std::cin.get();
+    //std::cin.get();
     //initiator.stop();
     return (0);
     }
