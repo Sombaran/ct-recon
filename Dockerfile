@@ -28,7 +28,7 @@ RUN bash -c "pwd; ls -lrth"
 RUN conan install . --output-folder=build --build=missing
 #RUN conan build .
 #RUN bash -c "cd build ; source conanbuild.sh"  \
-RUN  cmake .. -DCMAKE_TOOLCHAIN_FILE=conan_toolchain.cmake -DCMAKE_BUILD_TYPE=Release -j$(nproc)
+RUN  cmake .. -DCMAKE_TOOLCHAIN_FILE=conan_toolchain.cmake -DCMAKE_BUILD_TYPE=Release
 RUN  cmake --build . \
 RUN bash -c "pwd; ls -lrth"
 # ENTRYPOINT ["./build/source/my_app"]
