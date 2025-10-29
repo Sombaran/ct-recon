@@ -5,7 +5,7 @@ cmake_minimum_required(VERSION 3.10...3.26.3)
 project(recom CXX)
 
 # Find the QuickFIX package
-find_package(quickfix REQUIRED)
+#find_package(quickfix REQUIRED)
 
 # set the C++11 standard
 set(CMAKE_CXX_STANDARD 17)
@@ -19,7 +19,7 @@ add_executable(my_code
 )
 
 target_include_directories(my_code PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
-target_link_libraries(my_code quickfix::quickfix)
+#target_link_libraries(my_code quickfix::quickfix)
 
 # testing
 enable_testing()

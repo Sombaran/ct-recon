@@ -8,7 +8,7 @@ class CompressorRecipe(ConanFile):
 
     def requirements(self):
         self.requires("gtest/1.10.0")
-        self.requires("quickfix/1.15.1")
+        #self.requires("quickfix/1.15.1")
         if self.settings.os == "Linux":
             self.requires("base64/0.4.0")
 
