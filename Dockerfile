@@ -8,8 +8,11 @@ RUN apt-get update && apt-get install -y \
     libboost-system-dev \
     libboost-date-time-dev \
     python3 python3-pip \
+    gccgo-go \
+    golang-go \
     #pipx \
     && rm -rf /var/lib/apt/lists/*
+#RUN apt-get upgrade libstdc++6 -y
 
 WORKDIR /app
 
