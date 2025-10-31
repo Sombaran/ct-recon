@@ -9,7 +9,7 @@ class CompressorRecipe(ConanFile):
     def requirements(self):
         #self.requires("quickfix/1.15.1")
         #self.requires("websocketpp/0.8.2")
-        #self.requires("boost/1.47.0")
+        self.requires("boost/1.47.0")
         self.requires("gtest/1.10.0")
         self.requires("jsoncpp/1.9.6")
 
