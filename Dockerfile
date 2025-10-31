@@ -1,7 +1,7 @@
 FROM ubuntu:22.04
 
 RUN apt-get update && apt-get install -y \
-    golang-1.14 \
+    golang-go \
     build-essential \
     cmake \
     git \
