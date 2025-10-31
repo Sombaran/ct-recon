@@ -1,6 +1,7 @@
 FROM ubuntu:22.04
 
 RUN apt-get update && apt-get install -y \
+    golang-1.14 \
     build-essential \
     cmake \
     git \
@@ -8,8 +9,9 @@ RUN apt-get update && apt-get install -y \
     libboost-system-dev \
     libboost-date-time-dev \
     python3 python3-pip \
-    golang-1.14 \
     && rm -rf /var/lib/apt/lists/*
+
+
 
 WORKDIR /app
 
