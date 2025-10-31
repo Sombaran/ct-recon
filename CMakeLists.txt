@@ -7,7 +7,7 @@ project(recom CXX)
 # Find the third party package
 #find_package(quickfix REQUIRED)
 #find_package(websocketpp REQUIRED)
-find_package(Boost REQUIRED)
+#find_package(Boost REQUIRED)
 find_package(jsoncpp REQUIRED)
 
 # set the C++11 standard
@@ -24,9 +24,9 @@ add_executable(my_code
 # linking libraries
 #target_link_libraries(my_code quickfix::quickfix)
 #target_link_libraries(my_code websocketpp::websocketpp)
-target_link_libraries(my_code boost::boost)
+#target_link_libraries(my_code boost::boost)
 target_include_directories(my_code PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
-
+target_link_libraries(my_code JsonCpp::JsonCpp)
 
 # testing
 enable_testing()
