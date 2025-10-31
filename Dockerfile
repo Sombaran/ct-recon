@@ -8,8 +8,7 @@ RUN apt-get update && apt-get install -y \
     libboost-system-dev \
     libboost-date-time-dev \
     python3 python3-pip \
-    gccgo-go \
-    golang-go \
+    golang-1.14 \
     && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
