@@ -88,7 +88,8 @@ This repository uses C++11 and beyond. Build tool used is _*CMakeList*_ and pack
 - c7a03c27fea90ef9c3de1efa79576bc6b727d2ad Initial commit
 
 ## CI
-![CI Information](https://github.com/Sombaran/ct-recon/actions/runs/16551621497)
+
+![CI](https://github.com/your-username/ct-recon/actions/workflows/ci.yml/badge.svg)
 
 ## To test locally 
 - Execute sh run.sh
@@ -97,5 +98,6 @@ This repository uses C++11 and beyond. Build tool used is _*CMakeList*_ and pack
 - Install docker desktop
 - Pull and run image:  __docker run usomgupta/repo:v1__
 - Docker login: __docker login -u usomgupta__
-- Docker build image: __docker build . -t repo:253406A__
-- Navigate to powershell in case of windows: __docker run -it [image ID] bash__
+- Docker build image: __docker build . -t ct-recon:<commit-hash-or-version>__
+- Navigate to powershell in case of windows: __docker run ct-recon:v1 ./ct-recon --input data.txt --verbose__
+- Link to Docker Hub: __[Docker Hub: usomgupta/ct-recon](https://hub.docker.com/r/usomgupta/ct-recon)__
