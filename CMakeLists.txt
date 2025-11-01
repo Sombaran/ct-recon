@@ -1,35 +1,40 @@
-# cmake version needed
 cmake_minimum_required(VERSION 3.10...3.26.3)
 
-# project name
 project(recom CXX)
 
-# Find the third party package
-#find_package(quickfix REQUIRED)
-#find_package(websocketpp REQUIRED)
-#find_package(Boost REQUIRED)
+# Find required packages
 find_package(CURL REQUIRED)
 find_package(jsoncpp REQUIRED)
 
-# set the C++11 standard
+# Set C++ standard
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
-#set (CPP_CMAKE)
 
-add_executable(my_code
+# Shared library target
+add_library(ctReconServiceTool SHARED
     source/main.cpp
     source/testSrc.cpp
 )
 
-# linking libraries
-#target_link_libraries(my_code quickfix::quickfix)
-#target_link_libraries(my_code websocketpp::websocketpp)
-#target_link_libraries(my_code boost::boost)
-target_link_libraries(my_code CURL::libcurl)
-target_link_libraries(my_code JsonCpp::JsonCpp)
-target_include_directories(my_code PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
+target_link_libraries(ctReconServiceTool
+    CURL::libcurl
+    JsonCpp::JsonCpp
+)
 
-# testing
-enable_testing()
-find_package(GTest REQUIRED)
+target_include_directories(ctReconServiceTool PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
+
+
+# Executable target
+add_executable(ctReconServiceToolBin
+    source/main.cpp
+    source/testSrc.cpp
+)
+
+# Link executable with shared library and dependencies (optional)
+target_link_libraries(ctReconServiceToolBin
+    ctReconServiceTool
+)
+
+# Include directories (optional if linked with library)
+target_include_directories(ctReconServiceToolBin PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
