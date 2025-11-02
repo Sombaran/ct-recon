@@ -2,7 +2,7 @@ name: CI for docker/build-push-action
 
 on:
   schedule:
-    - cron: '50 10 * * 0'  # Runs every Sunday at 10:45 UTC
+    - cron: '25 5 * * 0'  # Runs every Sunday at 10:55 AM IST (05:25 UTC)
 
 permissions:
   contents: write
