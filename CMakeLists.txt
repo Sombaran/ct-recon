@@ -6,6 +6,10 @@ project(Reconstruction CXX)
 #include(${CMAKE_BINARY_DIR}/conan_toolchain.cmake)
 
 # Find required packages
+find_package(OpenSSL REQUIRED)
+find_package(Boost REQUIRED)
+find_package(websocketpp REQUIRED)
+find_package(rabbitmq-c REQUIRED)
 find_package(gRPC REQUIRED)
 find_package(GTest REQUIRED)
 find_package(CURL REQUIRED)
@@ -23,6 +27,10 @@ add_library(ctReconServiceTool SHARED
 )
 
 target_link_libraries(ctReconServiceTool
+    openssl::openssl
+    boost::boost
+    websocketpp::websocketpp
+    rabbitmq::rabbitmq-static
     grpc::grpc
     CURL::libcurl
     JsonCpp::JsonCpp

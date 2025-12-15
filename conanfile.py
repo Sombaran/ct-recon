@@ -8,8 +8,10 @@ class CompressorRecipe(ConanFile):
 
     def requirements(self):
         #self.requires("quickfix/1.15.1")
-        #self.requires("websocketpp/0.8.2")
-        #self.requires("boost/1.88.0")
+        self.requires("openssl/3.5.0")
+        self.requires("websocketpp/0.8.2")
+        self.requires("boost/1.83.0")
+        self.requires("rabbitmq-c/0.15.0")
         self.requires("grpc/1.72.0")
         self.requires("libcurl/8.16.0")
         self.requires("gtest/1.10.0")
