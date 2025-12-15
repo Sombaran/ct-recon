@@ -1,12 +1,27 @@
 #   ct-recon
 
-This repository uses C++11 and beyond. Build tool used is _*CMakeList*_ and package manger used is _*Conan*_
+This repository uses C++17. Build tool used is _*CMakeList*_ and package manger used is _*Conan*_
 
+## How to update Conan profile for C++17
 
+```
+[settings]
+os=Linux
+arch=x86_64
+compiler=gcc
+compiler.version=11
+compiler.libcxx=libstdc++11
+compiler.cppstd=17
+build_type=Release
+```
+```python
+conan install . --profile=default
+```
 
 ## Change log
 
-- 964ca65ad9e4398ebc1d8bb81d87c32d31735ae8 (HEAD -> main, origin/main) 254403A: Remove QuickFix Support
+- 444080f1743b52969b1f4fab29d57d8fa5349749 (HEAD -> main, origin/main) 255101A: updated C++ version 17 Added support for gRpc
+- 964ca65ad9e4398ebc1d8bb81d87c32d31735ae8 254403A: Remove QuickFix Support
 - 534d9d66fe2b0e144f58ec376436c32dce5353ec 2504302A
 - d8a84e15abd2fd4f44da9f0438fb623eb5ef61d8 254301D
 - e6575d090e9277fb0dd861eea225eaef92ea28ab 254301C
