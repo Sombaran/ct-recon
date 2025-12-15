@@ -1,8 +1,13 @@
 cmake_minimum_required(VERSION 3.10...3.26.3)
 
-project(recom CXX)
+project(Reconstruction CXX)
+
+# Include Conan toolchain for dependency management
+#include(${CMAKE_BINARY_DIR}/conan_toolchain.cmake)
 
 # Find required packages
+find_package(gRPC REQUIRED)
+find_package(GTest REQUIRED)
 find_package(CURL REQUIRED)
 find_package(jsoncpp REQUIRED)
 
@@ -18,8 +23,10 @@ add_library(ctReconServiceTool SHARED
 )
 
 target_link_libraries(ctReconServiceTool
+    grpc::grpc
     CURL::libcurl
     JsonCpp::JsonCpp
+    GTest::gtest GTest::gtest_main
 )
 
 target_include_directories(ctReconServiceTool PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
