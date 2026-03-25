@@ -20,6 +20,7 @@ conan install . --profile=default
 
 ## Change log
 
+- 152ca5006bf1421ea41e150c14c735cc78ab5f59 Added:webSocket
 - 444080f1743b52969b1f4fab29d57d8fa5349749 (HEAD -> main, origin/main) 255101A: updated C++ version 17 Added support for gRpc
 - 964ca65ad9e4398ebc1d8bb81d87c32d31735ae8 254403A: Remove QuickFix Support
 - 534d9d66fe2b0e144f58ec376436c32dce5353ec 2504302A
