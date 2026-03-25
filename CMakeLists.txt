@@ -10,10 +10,11 @@ find_package(OpenSSL REQUIRED)
 find_package(Boost REQUIRED)
 find_package(websocketpp REQUIRED)
 find_package(rabbitmq-c REQUIRED)
-find_package(gRPC REQUIRED)
+#find_package(gRPC REQUIRED)
 find_package(GTest REQUIRED)
 find_package(CURL REQUIRED)
 find_package(jsoncpp REQUIRED)
+find_package(Libwebsockets REQUIRED)
 
 # Set C++ standard
 set(CMAKE_CXX_STANDARD 17)
@@ -31,10 +32,11 @@ target_link_libraries(ctReconServiceTool
     boost::boost
     websocketpp::websocketpp
     rabbitmq::rabbitmq-static
-    grpc::grpc
+    #    grpc::grpc
     CURL::libcurl
     JsonCpp::JsonCpp
     GTest::gtest GTest::gtest_main
+    websockets
 )
 
 target_include_directories(ctReconServiceTool PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)

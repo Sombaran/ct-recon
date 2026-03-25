@@ -12,10 +12,11 @@ class CompressorRecipe(ConanFile):
         self.requires("websocketpp/0.8.2")
         self.requires("boost/1.83.0")
         self.requires("rabbitmq-c/0.15.0")
-        self.requires("grpc/1.72.0")
+        #self.requires("grpc/1.72.0")
         self.requires("libcurl/8.16.0")
         self.requires("gtest/1.10.0")
         self.requires("jsoncpp/1.9.6")
+        self.requires("libwebsockets/4.3.5")
 
         if self.settings.os == "Linux":
             self.requires("base64/0.4.0")
