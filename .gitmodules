@@ -1,3 +1,6 @@
 [submodule "mtechDocumentsSlides"]
 	path = mtechDocumentsSlides
 	url = https://github.com/Sombaran/mtechDocumentsSlides.git
+[submodule "baran-capital-view"]
+	path = baran-capital-view
+	url = https://github.com/Sombaran/baran-capital-view.git
