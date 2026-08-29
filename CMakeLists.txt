@@ -21,6 +21,9 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
+# Add submodule project
+add_subdirectory(baran-capital-view)
+
 # Shared library target
 add_library(ctReconServiceTool SHARED
     source/main.cpp
