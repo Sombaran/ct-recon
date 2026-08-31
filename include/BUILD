@@ -1,3 +1,5 @@
+exports_files(["testInc.h"])
+
 #load("@rules_cc//cc:cc_include.bzl", "cc_include")
 #load("@rules_cc//cc:defs.bzl", "cc_library")
 #cc_include(

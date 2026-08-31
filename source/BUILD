@@ -1,3 +1,5 @@
+exports_files(["main.cpp", "testSrc.cpp"])
+
 #cc_binary(
 #    name = "source_name",
 #    srcs = ["main.cpp", "testSrc.cpp"],

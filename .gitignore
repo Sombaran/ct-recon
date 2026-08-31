@@ -2,6 +2,14 @@
 *.d
 CMakeUserPresets.json
 build/
+.cache/
+compile_commands.json
+*.log
+
+# Bazel generated artifacts
+.bazel/
+MODULE.bazel.lock
+bazel-*/
 
 # Compiled Object files
 *.slo
