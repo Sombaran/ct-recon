@@ -40,3 +40,62 @@ bazel-*/
 *.exe
 *.out
 *.app
+
+
+# Python caches and local virtualenvs
+__pycache__/
+*.ini
+.pytest_cache/
+.venv/
+.venv*/
+*.py[cod]
+*.pyo
+*.pyd
+.mypy_cache/
+.pytype/
+
+# Local secret / login files
+.folio_login_code
+.upstox.env
+*.local
+MODULE.bazel.lock
+
+# Tooling / IDE state
+*.patch
+.bazel-cache/
+.bazelisk/
+.bazelrc.local
+bazel-*
+
+# Environment files
+.env/
+.env
+
+# Build artifacts
+build/
+builds/
+build-coverage
+dist/
+*.egg-info/
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
