@@ -3,4 +3,4 @@
 	url = https://github.com/Sombaran/mtechDocumentsSlides.git
 [submodule "PortfolioSense"]
 	path = PortfolioSense
-	url = https://github.com/Sombaran/PortfolioSense.git
+	url = git@github.com:Sombaran/PortfolioSense.git
